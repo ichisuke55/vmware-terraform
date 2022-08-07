@@ -1,2 +1,3 @@
-homelab/vcsa/.terraform*
-homelab/vcsa/*.tfstate*
+homelab/*/.terraform.*
+homelab/*/.terraform
+homelab/*/*.tfstate*
