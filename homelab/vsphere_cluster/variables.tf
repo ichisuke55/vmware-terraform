@@ -41,6 +41,7 @@ variable "cluster_hosts" {
     username   = string
     password   = string
     thumbprint = string
+    vds_nic    = string
   }))
   default = [
     {
@@ -48,6 +49,37 @@ variable "cluster_hosts" {
       username   = "root"
       password   = "VMware1!"
       thumbprint = "aa:bb:cc:dd:ee:ff:aa:bb:cc:dd:ee:ff:aa:bb:cc:dd:ee:ff:aa:bb"
+      vds_nic    = "vmnic1"
     }
   ]
+}
+
+variable "ha_heartbeat_datastore_policy" {
+  type    = string
+  default = "allFeasibleDs"
+}
+
+variable "vds_name" {
+  type    = string
+  default = "vds1"
+}
+
+variable "uplinks" {
+  type    = list(string)
+  default = ["uplink1", "uplink2"]
+}
+
+variable "active_uplinks" {
+  type    = list(string)
+  default = ["uplink1"]
+}
+
+variable "standby_uplinks" {
+  type    = list(string)
+  default = ["uplink2"]
+}
+
+variable "teaming_policy" {
+  type    = string
+  default = "loadbalance_ip"
 }

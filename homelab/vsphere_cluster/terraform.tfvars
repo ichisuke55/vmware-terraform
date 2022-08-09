@@ -10,6 +10,7 @@ cluster_hosts = [
     hostname   = "ESXI_HOSTNAME",
     username   = "ESXI_USERNAME",
     password   = "ESXI_PASSWORD",
-    thumbprint = "ESXI_THUMBPRINT"
+    thumbprint = "ESXI_THUMBPRINT",
+    vds_nic    = "ESXI_VDS_NIC"
   }
 ]
